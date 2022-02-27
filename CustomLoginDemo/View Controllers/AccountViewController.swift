@@ -7,6 +7,8 @@
 
 import UIKit
 import RAGTextField
+import FloatingLabelTextFieldSwiftUI
+import SwiftUI
 
 class AccountViewController: UIViewController, UITextFieldDelegate {
 
@@ -49,10 +51,18 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         Utilities.styleFilledButton(saveAccountButton)
         Utilities.circularImage(profileImage)
         Utilities.styleFilledButton(uploadProfileImage)
-//        RAGTextField.placeholderRect(firsNameTextField)
         
     }
     
+    struct ContentView: View{
+        @State private var firstName: String = ""
+        var body: some View{
+            FloatingLabelTextField($firstName, placeholder: "First Name",editingChanged: {(isChanged) in )}
+                                   {
+                
+            }.frame(height.70)
+        }
+    }
 
     
 

@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0250A75027CAE54D0097700E /* RAGTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 0250A74F27CAE54D0097700E /* RAGTextField */; };
+		0250A75827CBEA0B0097700E /* FloatingLabelTextFieldSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0250A75727CBEA0B0097700E /* FloatingLabelTextFieldSwiftUI */; };
 		027877B427BF87A6007AAD60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027877B327BF87A6007AAD60 /* AppDelegate.swift */; };
 		027877B627BF87A6007AAD60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027877B527BF87A6007AAD60 /* SceneDelegate.swift */; };
 		027877B827BF87A6007AAD60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027877B727BF87A6007AAD60 /* ViewController.swift */; };
@@ -44,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0250A75027CAE54D0097700E /* RAGTextField in Frameworks */,
+				0250A75827CBEA0B0097700E /* FloatingLabelTextFieldSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,7 +120,7 @@
 			);
 			name = CustomLoginDemo;
 			packageProductDependencies = (
-				0250A74F27CAE54D0097700E /* RAGTextField */,
+				0250A75727CBEA0B0097700E /* FloatingLabelTextFieldSwiftUI */,
 			);
 			productName = CustomLoginDemo;
 			productReference = 027877B027BF87A6007AAD60 /* CustomLoginDemo.app */;
@@ -151,7 +151,7 @@
 			);
 			mainGroup = 027877A727BF87A6007AAD60;
 			packageReferences = (
-				0250A74E27CAE54D0097700E /* XCRemoteSwiftPackageReference "RAGTextField" */,
+				0250A75627CBEA0B0097700E /* XCRemoteSwiftPackageReference "FloatingLabelTextFieldSwiftUI" */,
 			);
 			productRefGroup = 027877B127BF87A6007AAD60 /* Products */;
 			projectDirPath = "";
@@ -402,21 +402,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		0250A74E27CAE54D0097700E /* XCRemoteSwiftPackageReference "RAGTextField" */ = {
+		0250A75627CBEA0B0097700E /* XCRemoteSwiftPackageReference "FloatingLabelTextFieldSwiftUI" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/raginmari/RAGTextField.git";
+			repositoryURL = "https://github.com/kishanraja/FloatingLabelTextFieldSwiftUI.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.1;
+				minimumVersion = 4.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0250A74F27CAE54D0097700E /* RAGTextField */ = {
+		0250A75727CBEA0B0097700E /* FloatingLabelTextFieldSwiftUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0250A74E27CAE54D0097700E /* XCRemoteSwiftPackageReference "RAGTextField" */;
-			productName = RAGTextField;
+			package = 0250A75627CBEA0B0097700E /* XCRemoteSwiftPackageReference "FloatingLabelTextFieldSwiftUI" */;
+			productName = FloatingLabelTextFieldSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -2,12 +2,12 @@
   "object": {
     "pins": [
       {
-        "package": "RAGTextField",
-        "repositoryURL": "https://github.com/raginmari/RAGTextField.git",
+        "package": "FloatingLabelTextFieldSwiftUI",
+        "repositoryURL": "https://github.com/kishanraja/FloatingLabelTextFieldSwiftUI.git",
         "state": {
           "branch": null,
-          "revision": "f40f56e6b9700a3711c72b48af9369032bc063ad",
-          "version": "0.14.0"
+          "revision": "b9aab8fa5f13474180274cfb7022357e8461b838",
+          "version": "4.2.1"
         }
       }
     ]
