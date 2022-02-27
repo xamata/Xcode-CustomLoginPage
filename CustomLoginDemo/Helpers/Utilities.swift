@@ -33,6 +33,21 @@ extension UIColor {
    }
 }
 
+enum ColorPalette {
+//    hex: 0xECF0F1
+    static let chalk = UIColor.init(red: Int(1.00), green: Int(0.33), blue: Int(1.00))
+//    0xE74C3C
+    static let flame = UIColor(rgb: Int(0xE74C3C))
+//    static let sky = UIColor(hex: 0x3498DB)
+//    static let meadow = UIColor(hex: 0x2ECC71)
+//    static let savanna = UIColor(hex: 0xE67E22)
+//    static let bramble = UIColor(hex: 0x9B59B6)
+//    static let midnight = UIColor(hex: 0x34495E)
+//    static let stone = UIColor(hex: 0x95A5A6)
+//    static let star = UIColor(hex: 0xF1C40F)
+}
+
+
 class Utilities {
     
     static func styleTextField(_ textfield:UITextField) {
@@ -74,5 +89,13 @@ class Utilities {
         let passwordTest = NSPredicate(format: "SELF MATCHES %@", "^(?=.*[a-z])(?=.*[$@$#!%*?&])[A-Za-z\\d$@$#!%*?&]{8,}")
         return passwordTest.evaluate(with: password)
     }
+    
+    static func circularImage(_ image : UIImageView){
+        image.layer.masksToBounds = true
+        image.layer.cornerRadius = image.bounds.width / 2
+    }
+    
+    
+    
     
 }

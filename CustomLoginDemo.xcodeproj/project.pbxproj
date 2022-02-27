@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0250A75027CAE54D0097700E /* RAGTextField in Frameworks */ = {isa = PBXBuildFile; productRef = 0250A74F27CAE54D0097700E /* RAGTextField */; };
 		027877B427BF87A6007AAD60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027877B327BF87A6007AAD60 /* AppDelegate.swift */; };
 		027877B627BF87A6007AAD60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027877B527BF87A6007AAD60 /* SceneDelegate.swift */; };
 		027877B827BF87A6007AAD60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027877B727BF87A6007AAD60 /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0250A75027CAE54D0097700E /* RAGTextField in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +119,9 @@
 			dependencies = (
 			);
 			name = CustomLoginDemo;
+			packageProductDependencies = (
+				0250A74F27CAE54D0097700E /* RAGTextField */,
+			);
 			productName = CustomLoginDemo;
 			productReference = 027877B027BF87A6007AAD60 /* CustomLoginDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -145,6 +150,9 @@
 				Base,
 			);
 			mainGroup = 027877A727BF87A6007AAD60;
+			packageReferences = (
+				0250A74E27CAE54D0097700E /* XCRemoteSwiftPackageReference "RAGTextField" */,
+			);
 			productRefGroup = 027877B127BF87A6007AAD60 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -392,6 +400,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0250A74E27CAE54D0097700E /* XCRemoteSwiftPackageReference "RAGTextField" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/raginmari/RAGTextField.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0250A74F27CAE54D0097700E /* RAGTextField */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0250A74E27CAE54D0097700E /* XCRemoteSwiftPackageReference "RAGTextField" */;
+			productName = RAGTextField;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 027877A827BF87A6007AAD60 /* Project object */;
 }

@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import RAGTextField
 
-class AccountViewController: UIViewController {
+class AccountViewController: UIViewController, UITextFieldDelegate {
 
-    @IBOutlet weak var firsNameTextField: UITextField!
+    @IBOutlet weak var firsNameTextField: RAGTextField!
     
+    @IBOutlet weak var uploadProfileImage: UIButton!
+    
+    @IBOutlet weak var profileImage: UIImageView!
     
     @IBOutlet weak var lastNameTextField: UITextField!
     
@@ -38,7 +42,18 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setUpElements()
     }
+    
+    func setUpElements(){
+        Utilities.styleFilledButton(saveAccountButton)
+        Utilities.circularImage(profileImage)
+        Utilities.styleFilledButton(uploadProfileImage)
+        RAGTextField.placeholderRect(firsNameTextField)
+        
+    }
+    
+
     
 
     /*

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "RAGTextField",
+        "repositoryURL": "https://github.com/raginmari/RAGTextField.git",
+        "state": {
+          "branch": null,
+          "revision": "f40f56e6b9700a3711c72b48af9369032bc063ad",
+          "version": "0.14.0"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
