@@ -49,7 +49,7 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         Utilities.styleFilledButton(saveAccountButton)
         Utilities.circularImage(profileImage)
         Utilities.styleFilledButton(uploadProfileImage)
-        RAGTextField.placeholderRect(firsNameTextField)
+//        RAGTextField.placeholderRect(firsNameTextField)
         
     }
     
