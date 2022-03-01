@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0250A75827CBEA0B0097700E /* FloatingLabelTextFieldSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 0250A75727CBEA0B0097700E /* FloatingLabelTextFieldSwiftUI */; };
+		0250A75A27CDCC1C0097700E /* ScrollViewTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250A75927CDCC1C0097700E /* ScrollViewTestViewController.swift */; };
+		0250A75C27CDD4450097700E /* FloatingLabelInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250A75B27CDD4450097700E /* FloatingLabelInput.swift */; };
 		027877B427BF87A6007AAD60 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027877B327BF87A6007AAD60 /* AppDelegate.swift */; };
 		027877B627BF87A6007AAD60 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027877B527BF87A6007AAD60 /* SceneDelegate.swift */; };
 		027877B827BF87A6007AAD60 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027877B727BF87A6007AAD60 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0250A75927CDCC1C0097700E /* ScrollViewTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewTestViewController.swift; sourceTree = "<group>"; };
+		0250A75B27CDD4450097700E /* FloatingLabelInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingLabelInput.swift; sourceTree = "<group>"; };
 		027877B027BF87A6007AAD60 /* CustomLoginDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomLoginDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		027877B327BF87A6007AAD60 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		027877B527BF87A6007AAD60 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +91,7 @@
 			children = (
 				027877C727BF87F0007AAD60 /* SignUpViewController.swift */,
 				027877C927BF8807007AAD60 /* LoginViewController.swift */,
+				0250A75927CDCC1C0097700E /* ScrollViewTestViewController.swift */,
 				027877CB27BF8811007AAD60 /* HomeViewController.swift */,
 				027877B727BF87A6007AAD60 /* ViewController.swift */,
 				02D4D3EC27C8183F008FE7CD /* AccountViewController.swift */,
@@ -99,6 +104,7 @@
 			children = (
 				02C3679B27BFF8B100E65143 /* Constants.swift */,
 				02C3679A27BFF8B100E65143 /* Utilities.swift */,
+				0250A75B27CDD4450097700E /* FloatingLabelInput.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -180,6 +186,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0250A75C27CDD4450097700E /* FloatingLabelInput.swift in Sources */,
+				0250A75A27CDCC1C0097700E /* ScrollViewTestViewController.swift in Sources */,
 				027877B827BF87A6007AAD60 /* ViewController.swift in Sources */,
 				027877B427BF87A6007AAD60 /* AppDelegate.swift in Sources */,
 				02C3679C27BFF8B100E65143 /* Utilities.swift in Sources */,

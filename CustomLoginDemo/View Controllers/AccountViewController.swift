@@ -6,13 +6,12 @@
 //
 
 import UIKit
-import RAGTextField
 import FloatingLabelTextFieldSwiftUI
 import SwiftUI
 
-class AccountViewController: UIViewController, UITextFieldDelegate {
+class AccountViewController: UIViewController {
 
-    @IBOutlet weak var firsNameTextField: RAGTextField!
+    @IBOutlet weak var firsNameTextField: UITextField!
     
     @IBOutlet weak var uploadProfileImage: UIButton!
     
@@ -54,13 +53,17 @@ class AccountViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    struct ContentView: View{
+    struct ContentView: View {
+        
         @State private var firstName: String = ""
-        var body: some View{
-            FloatingLabelTextField($firstName, placeholder: "First Name",editingChanged: {(isChanged) in )}
-                                   {
+        
+        var body: some View {
+            
+            FloatingLabelTextField($firstName, placeholder: "First Name", editingChanged: { (isChanged) in
                 
-            }.frame(height.70)
+            }) {
+                
+            }.frame(height: 70)
         }
     }
 
