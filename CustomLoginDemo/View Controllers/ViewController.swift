@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var firstNameLabel: FloatingLabelInput!
     
     @IBOutlet weak var signUpButton: UIButton!
     
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
         // Style the elements
         Utilities.styleFilledButton(signUpButton)
         Utilities.styleFilledButton(loginButton)
-        view.backgroundColor = UIColor.init(red: 0.07, green: 0.73, blue: 0.93, alpha: 1.00)
+//        view.backgroundColor = UIColor.init(red: 0.07, green: 0.73, blue: 0.93, alpha: 1.00)
     }
 
 

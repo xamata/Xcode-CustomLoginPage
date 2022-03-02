@@ -183,7 +183,6 @@
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b8v-Tn-q0K">
                                                 <rect key="frame" x="0.0" y="178" width="414" height="800"/>
-                                                <color key="backgroundColor" systemColor="systemYellowColor"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="800" id="c5F-o1-pQd"/>
@@ -218,7 +217,7 @@
                                             <constraint firstAttribute="height" constant="50" id="2Ru-7v-hIc"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -505,17 +504,31 @@
                                     <constraint firstItem="5Dh-HD-YAc" firstAttribute="height" secondItem="dfV-k0-mXu" secondAttribute="height" id="cn0-gj-XU1"/>
                                 </constraints>
                             </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kCH-91-fow" userLabel="First Name" customClass="FloatingLabelInput" customModule="CustomLoginDemo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="423" width="374" height="50"/>
+                                <accessibility key="accessibilityConfiguration" hint="First Name" label="First Name"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="UOk-mz-iBT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kCH-91-fow" secondAttribute="trailing" constant="20" id="2za-aT-icv"/>
+                            <constraint firstItem="kCH-91-fow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D0I-j8-xdB"/>
+                            <constraint firstItem="kCH-91-fow" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oqd-VB-9F9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uJe-FR-cnw" secondAttribute="trailing" constant="40" id="Szv-zL-bri"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uJe-FR-cnw" secondAttribute="bottom" constant="40" id="eYL-9b-G3W"/>
                             <constraint firstItem="uJe-FR-cnw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="n7A-ig-Bgh"/>
+                            <constraint firstItem="kCH-91-fow" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="p9f-0f-UpH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="F8P-bV-ae3"/>
                     <connections>
+                        <outlet property="firstNameLabel" destination="kCH-91-fow" id="6Pp-jR-EDB"/>
                         <outlet property="loginButton" destination="5Dh-HD-YAc" id="12n-8n-753"/>
                         <outlet property="signUpButton" destination="dfV-k0-mXu" id="c5S-um-q29"/>
                     </connections>
@@ -575,9 +588,6 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
