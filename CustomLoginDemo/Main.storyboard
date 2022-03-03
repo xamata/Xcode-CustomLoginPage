@@ -504,11 +504,20 @@
                                     <constraint firstItem="5Dh-HD-YAc" firstAttribute="height" secondItem="dfV-k0-mXu" secondAttribute="height" id="cn0-gj-XU1"/>
                                 </constraints>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kCH-91-fow" userLabel="First Name" customClass="FloatingLabelInput" customModule="CustomLoginDemo" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kCH-91-fow" userLabel="First Name" customClass="FloatingLabelInput" customModule="CustomLoginDemo" customModuleProvider="target">
                                 <rect key="frame" x="20" y="423" width="374" height="50"/>
                                 <accessibility key="accessibilityConfiguration" hint="First Name" label="First Name"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="UOk-mz-iBT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lb7-gd-VhZ" userLabel="Last name" customClass="FloatingLabelInput" customModule="CustomLoginDemo" customModuleProvider="target">
+                                <rect key="frame" x="20" y="502" width="374" height="50"/>
+                                <accessibility key="accessibilityConfiguration" hint="First Name" label="First Name"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9uG-sb-Hml"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -519,6 +528,9 @@
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kCH-91-fow" secondAttribute="trailing" constant="20" id="2za-aT-icv"/>
                             <constraint firstItem="kCH-91-fow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="D0I-j8-xdB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lb7-gd-VhZ" secondAttribute="trailing" constant="20" id="FhC-nC-tX3"/>
+                            <constraint firstItem="lb7-gd-VhZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ld0-ar-Wjg"/>
+                            <constraint firstItem="lb7-gd-VhZ" firstAttribute="top" secondItem="kCH-91-fow" secondAttribute="bottom" constant="29" id="O2c-gN-tdQ"/>
                             <constraint firstItem="kCH-91-fow" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Oqd-VB-9F9"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uJe-FR-cnw" secondAttribute="trailing" constant="40" id="Szv-zL-bri"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uJe-FR-cnw" secondAttribute="bottom" constant="40" id="eYL-9b-G3W"/>

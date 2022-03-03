@@ -18,20 +18,9 @@ class FloatingLabelInput: UITextField {
     var _placeholder: String?
     
     @IBInspectable
-    var floatingLabelColor: UIColor = UIColor.blue {
+    var floatingLabelColor: UIColor = UIColor.black.withAlphaComponent(0.5) {
         didSet {
             self.floatingLabel.textColor = floatingLabelColor
-            self.setNeedsDisplay()
-        }
-    }
-    
-    @IBInspectable
-    var activeBorderColor: UIColor = UIColor.blue
-    
-    @IBInspectable
-    var floatingLabelBackground: UIColor = UIColor.white.withAlphaComponent(1.0) {
-        didSet {
-            self.floatingLabel.backgroundColor = floatingLabelBackground
             self.setNeedsDisplay()
         }
     }
@@ -46,9 +35,28 @@ class FloatingLabelInput: UITextField {
     }
     
     @IBInspectable
+    var activeBorderColor: UIColor = UIColor.blue
+    
+    @IBInspectable
+    var borderWidth: Double = 8.0
+    
+    @IBInspectable
+    var bottomLine = CALayer()
+    
+    
+    @IBInspectable
+    var floatingLabelBackground: UIColor = UIColor.white.withAlphaComponent(1.0) {
+        didSet {
+            self.floatingLabel.backgroundColor = floatingLabelBackground
+            self.setNeedsDisplay()
+        }
+    }
+    
+    
+    @IBInspectable
     var _backgroundColor: UIColor = UIColor.white {
         didSet {
-            self.layer.backgroundColor = self._backgroundColor.cgColor
+            self.backgroundColor = self._backgroundColor
         }
     }
     
@@ -68,13 +76,20 @@ class FloatingLabelInput: UITextField {
             self.floatingLabel.textColor = floatingLabelColor
             self.floatingLabel.font = floatingLabelFont
             self.floatingLabel.text = self._placeholder
-            self.floatingLabel.layer.backgroundColor = UIColor.red.cgColor
+            self.floatingLabel.backgroundColor = self.floatingLabelBackground
             self.floatingLabel.translatesAutoresizingMaskIntoConstraints = false
             self.floatingLabel.clipsToBounds = true
             self.floatingLabel.frame = CGRect(x: 0, y: 0, width: floatingLabel.frame.width+4, height: floatingLabel.frame.height+2)
             self.floatingLabel.textAlignment = .center
             self.addSubview(self.floatingLabel)
+            self.layer.borderWidth = self.borderWidth
             self.layer.borderColor = self.activeBorderColor.cgColor
+            self.frame = CGRect(x: 0.0, y: self.frame.height - 1, width: self.frame.width, height: 1.0)
+            self.borderStyle = UITextField.BorderStyle.none
+            self.bottomLine.frame = CGRect(x: 0.0, y: self.frame.height - 1, width: self.frame.width, height: 1.0)
+            bottomLine.backgroundColor = UIColor.red.cgColor
+            self.layer.addSublayer(bottomLine)
+            
             
             self.floatingLabel.bottomAnchor.constraint(equalTo: self.topAnchor, constant: -10).isActive = true // Place our label 10 pts above the text field
             self.placeholder = ""
@@ -82,6 +97,7 @@ class FloatingLabelInput: UITextField {
         // Floating label may be stuck behind text input. we bring it forward as it was the last item added to the view heirachy
         self.bringSubviewToFront(subviews.last!)
         self.setNeedsDisplay()
+        
     }
     
     @objc func removeFloatingLabel() {
@@ -92,7 +108,7 @@ class FloatingLabelInput: UITextField {
             }
             self.placeholder = self._placeholder
         }
-        self.layer.borderColor = UIColor.black.cgColor
+//        self.layer.borderColor = UIColor.black.cgColor
     }
     
     func addViewPasswordButton() {
