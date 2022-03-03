@@ -11,30 +11,29 @@ import SwiftUI
 
 class AccountViewController: UIViewController {
 
-    @IBOutlet weak var firsNameTextField: UITextField!
+    @IBOutlet weak var firsNameTextField: FloatingLabelInput!
     
     @IBOutlet weak var uploadProfileImage: UIButton!
     
     @IBOutlet weak var profileImage: UIImageView!
     
-    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: FloatingLabelInput!
     
-    @IBOutlet weak var userNameTextField: UITextField!
+    @IBOutlet weak var userNameTextField: FloatingLabelInput!
     
     @IBOutlet weak var genderPullDown: UIButton!
     
-    @IBOutlet weak var birthdayTextField: UITextField!
+    @IBOutlet weak var birthdayTextField: FloatingLabelInput!
     
-    @IBOutlet weak var adressLine1TextField: UITextField!
+    @IBOutlet weak var adressLine1TextField: FloatingLabelInput!
     
-    @IBOutlet weak var adressLine2TextField: UITextField!
+    @IBOutlet weak var adressLine2TextField: FloatingLabelInput!
     
-    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var phoneTextField: FloatingLabelInput!
     
-    @IBOutlet weak var websiteTextField: UITextField!
+    @IBOutlet weak var websiteTextField: FloatingLabelInput!
     
-    @IBOutlet weak var bioTextField: UITextField!
-    
+    @IBOutlet weak var bioTextField: FloatingLabelInput!
     
     @IBOutlet weak var saveAccountButton: UIButton!
     
@@ -50,6 +49,16 @@ class AccountViewController: UIViewController {
         Utilities.styleFilledButton(saveAccountButton)
         Utilities.circularImage(profileImage)
         Utilities.styleFilledButton(uploadProfileImage)
+        
+        // UITextField BorderStyle
+        self.firsNameTextField.addBottomBorder()
+        self.lastNameTextField.addBottomBorder()
+        self.userNameTextField.addBottomBorder()
+        self.birthdayTextField.addBottomBorder()
+        self.adressLine1TextField.addBottomBorder()
+        self.adressLine2TextField.addBottomBorder()
+        self.phoneTextField.addBottomBorder()
+        self.websiteTextField.addBottomBorder()
         
     }
     

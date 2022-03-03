@@ -35,10 +35,10 @@ class FloatingLabelInput: UITextField {
     }
     
     @IBInspectable
-    var activeBorderColor: UIColor = UIColor.blue
+    var activeBorderColor: UIColor = UIColor.black
     
     @IBInspectable
-    var borderWidth: Double = 8.0
+    var borderWidth: Double = 1.0
     
     @IBInspectable
     var bottomLine = CALayer()
@@ -60,6 +60,16 @@ class FloatingLabelInput: UITextField {
         }
     }
     
+
+    func addBottomBorder(){
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0, y: self.frame.size.height - 1, width: self.frame.size.width, height: 1)
+        bottomLine.backgroundColor = UIColor.gray.cgColor
+        //  no frame around UITextField, allows for bottom line BorderStyle
+        borderStyle = .none
+        layer.addSublayer(bottomLine)
+    }
+    
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -79,22 +89,13 @@ class FloatingLabelInput: UITextField {
             self.floatingLabel.backgroundColor = self.floatingLabelBackground
             self.floatingLabel.translatesAutoresizingMaskIntoConstraints = false
             self.floatingLabel.clipsToBounds = true
-            self.floatingLabel.frame = CGRect(x: 0, y: 0, width: floatingLabel.frame.width+4, height: floatingLabel.frame.height+2)
             self.floatingLabel.textAlignment = .center
             self.addSubview(self.floatingLabel)
-            self.layer.borderWidth = self.borderWidth
-            self.layer.borderColor = self.activeBorderColor.cgColor
-            self.frame = CGRect(x: 0.0, y: self.frame.height - 1, width: self.frame.width, height: 1.0)
-            self.borderStyle = UITextField.BorderStyle.none
-            self.bottomLine.frame = CGRect(x: 0.0, y: self.frame.height - 1, width: self.frame.width, height: 1.0)
-            bottomLine.backgroundColor = UIColor.red.cgColor
-            self.layer.addSublayer(bottomLine)
             
-            
-            self.floatingLabel.bottomAnchor.constraint(equalTo: self.topAnchor, constant: -10).isActive = true // Place our label 10 pts above the text field
+            self.floatingLabel.bottomAnchor.constraint(equalTo: self.topAnchor, constant: 3).isActive = true // Place our label 10 pts above the text field
             self.placeholder = ""
         }
-        // Floating label may be stuck behind text input. we bring it forward as it was the last item added to the view heirachy
+        // Floating label may be stuck behind text input. we bring it forward as it was the last item added to the view hierarchy
         self.bringSubviewToFront(subviews.last!)
         self.setNeedsDisplay()
         
@@ -145,3 +146,4 @@ class FloatingLabelInput: UITextField {
         }
     }
 }
+
