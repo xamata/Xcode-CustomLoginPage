@@ -19,9 +19,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var popUpButton: UIButton!
     
-    @IBAction func chooseGender(_ sender: Any) {
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -35,17 +33,29 @@ class ViewController: UIViewController {
 //        view.backgroundColor = UIColor.init(red: 0.07, green: 0.73, blue: 0.93, alpha: 1.00)
         self.firstNameLabel.addBottomBorder()
         self.lastNameLabel.addBottomBorder()
+        
+        setGenderPopUpButton()
     }
 
     
     
-    func popUpButtons(){
-        popUpButton.changesSelectionAsPrimaryAction = true
-        popUpButton.showsMenuAsPrimaryAction = true
+    func setGenderPopUpButton(){
+        let optionClosure = {(action : UIAction) in print(action.title)}
+        let menuOptions = ["--", "Male", "Female", "Unidentified"]
         
-    }
-    
-    
+        
+        popUpButton.menu = UIMenu(children : [
+            
+            UIAction(title : menuOptions[0], state: .on, handler: optionClosure),
+            UIAction(title : menuOptions[1], handler: optionClosure),
+            UIAction(title : menuOptions[2], handler: optionClosure),
+            UIAction(title : menuOptions[3], handler: optionClosure),
+        ])
+        popUpButton.showsMenuAsPrimaryAction = true
+        popUpButton.changesSelectionAsPrimaryAction = true
+      }
+                                  
+        
 
 }
 

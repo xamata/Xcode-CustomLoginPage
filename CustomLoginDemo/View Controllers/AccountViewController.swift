@@ -37,12 +37,14 @@ class AccountViewController: UIViewController {
     
     @IBOutlet weak var saveAccountButton: UIButton!
     
+    @IBOutlet weak var genderPopUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         setUpElements()
+        setUpPopUpButton()
     }
     
     func setUpElements(){
@@ -74,6 +76,21 @@ class AccountViewController: UIViewController {
                 
             }.frame(height: 70)
         }
+    }
+    
+    func setUpPopUpButton(){
+        let optionClosure = {(action : UIAction) in print(action.title)}
+        let menuOptions = ["Non-Binary", "Female", "Male"]
+        
+        genderPopUpButton.menu = UIMenu(children : [
+            UIAction(title: menuOptions[0], state: .on, handler: optionClosure),
+            UIAction(title: menuOptions[1], handler: optionClosure),
+            UIAction(title: menuOptions[2], handler: optionClosure),
+        ])
+        
+            
+        genderPopUpButton.showsMenuAsPrimaryAction = true
+        genderPopUpButton.changesSelectionAsPrimaryAction = true
     }
 
     
