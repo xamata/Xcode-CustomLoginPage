@@ -267,8 +267,24 @@
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_blackground" translatesAutoresizingMaskIntoConstraints="NO" id="r59-k2-vnY">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="205"/>
                                     </imageView>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="meT-Gl-rfV" userLabel="stateUnderline" customClass="FloatingLabelInput" customModule="CustomLoginDemo" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="754" width="172" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Qms-wu-bWi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HkZ-zs-h0Z" userLabel="genderUnderline" customClass="FloatingLabelInput" customModule="CustomLoginDemo" customModuleProvider="target">
+                                        <rect key="frame" x="30" y="420" width="354" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8H4-b7-7FF"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PTa-W8-LIw">
-                                        <rect key="frame" x="30" y="0.0" width="354" height="970"/>
+                                        <rect key="frame" x="30" y="0.0" width="354" height="1127"/>
                                         <subviews>
                                             <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Od6-Ku-D2R">
                                                 <rect key="frame" x="0.0" y="0.0" width="354" height="200"/>
@@ -388,8 +404,48 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zns-pq-P67" customClass="FloatingLabelInput" customModule="CustomLoginDemo" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iHa-ZG-rKM" userLabel="City" customClass="FloatingLabelInput" customModule="CustomLoginDemo" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="660" width="354" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="daL-7v-fgr"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="State" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6d5-8c-qcd" userLabel="State Label">
+                                                <rect key="frame" x="0.0" y="720" width="354" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" systemColor="systemGrayColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="3ZL-q5-ZVL">
+                                                <rect key="frame" x="0.0" y="757" width="354" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qxZ-ER-1jm" userLabel="States">
+                                                        <rect key="frame" x="0.0" y="0.0" width="177" height="40"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="plain" image="chevron.down" catalog="system" imagePlacement="trailing" title="AK - Alaska">
+                                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="statesPickerView:" destination="jLg-nG-Y01" eventType="touchUpInside" id="q28-EI-L6C"/>
+                                                        </connections>
+                                                    </button>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Zip Code" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VDS-Yi-gef" userLabel="Zip Code" customClass="FloatingLabelInput" customModule="CustomLoginDemo" customModuleProvider="target">
+                                                        <rect key="frame" x="177" y="0.0" width="177" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="8be-nz-KFV"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="fkX-iH-PMz"/>
+                                                </constraints>
+                                            </stackView>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zns-pq-P67" customClass="FloatingLabelInput" customModule="CustomLoginDemo" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="817" width="354" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="aqW-GI-eu6"/>
                                                 </constraints>
@@ -397,7 +453,7 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Website" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LCg-vZ-exq" customClass="FloatingLabelInput" customModule="CustomLoginDemo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="720" width="354" height="40"/>
+                                                <rect key="frame" x="0.0" y="877" width="354" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="7o5-6R-lwQ"/>
                                                 </constraints>
@@ -405,12 +461,12 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="roundedRect" placeholder="Bio" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E8d-bg-VSM" customClass="FloatingLabelInput" customModule="CustomLoginDemo" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="780" width="354" height="120"/>
+                                                <rect key="frame" x="0.0" y="937" width="354" height="120"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k8e-CP-7Ff">
-                                                <rect key="frame" x="0.0" y="920" width="354" height="50"/>
+                                                <rect key="frame" x="0.0" y="1077" width="354" height="50"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B0B-oI-T6V" userLabel="Save Account Button">
                                                         <rect key="frame" x="44.5" y="-5" width="265.5" height="60"/>
@@ -437,14 +493,25 @@
                                     </stackView>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="meT-Gl-rfV" firstAttribute="bottom" secondItem="qxZ-ER-1jm" secondAttribute="bottom" id="74E-Ys-fvC"/>
+                                    <constraint firstItem="meT-Gl-rfV" firstAttribute="centerY" secondItem="qxZ-ER-1jm" secondAttribute="centerY" id="7V6-qn-uY1"/>
+                                    <constraint firstItem="HkZ-zs-h0Z" firstAttribute="centerY" secondItem="hHL-Tp-p8L" secondAttribute="centerY" id="9j6-Zp-nwh"/>
+                                    <constraint firstItem="meT-Gl-rfV" firstAttribute="top" secondItem="qxZ-ER-1jm" secondAttribute="top" id="A14-Z0-NYl"/>
                                     <constraint firstItem="r59-k2-vnY" firstAttribute="height" secondItem="Od6-Ku-D2R" secondAttribute="height" multiplier="1.024" id="CVf-mu-uWT"/>
                                     <constraint firstItem="PTa-W8-LIw" firstAttribute="width" secondItem="gdK-eI-Ygz" secondAttribute="width" constant="-60" id="H0C-iv-UZ4"/>
+                                    <constraint firstItem="HkZ-zs-h0Z" firstAttribute="width" secondItem="hHL-Tp-p8L" secondAttribute="width" id="Iu7-zU-iXJ"/>
+                                    <constraint firstItem="HkZ-zs-h0Z" firstAttribute="height" secondItem="hHL-Tp-p8L" secondAttribute="height" id="KBX-Bt-c9c"/>
                                     <constraint firstItem="r59-k2-vnY" firstAttribute="leading" secondItem="161-Tf-G4s" secondAttribute="leading" id="ObY-vg-FIx"/>
+                                    <constraint firstItem="meT-Gl-rfV" firstAttribute="height" secondItem="qxZ-ER-1jm" secondAttribute="height" id="XGT-1L-C3D"/>
                                     <constraint firstItem="PTa-W8-LIw" firstAttribute="trailing" secondItem="ZXW-fa-xSh" secondAttribute="trailing" constant="30" id="a4G-4I-gzx"/>
                                     <constraint firstItem="PTa-W8-LIw" firstAttribute="top" secondItem="ZXW-fa-xSh" secondAttribute="top" id="a82-Jc-wLd"/>
+                                    <constraint firstItem="meT-Gl-rfV" firstAttribute="width" secondItem="qxZ-ER-1jm" secondAttribute="width" multiplier="0.971751" id="azz-Vp-zbF"/>
                                     <constraint firstItem="r59-k2-vnY" firstAttribute="trailing" secondItem="gdK-eI-Ygz" secondAttribute="trailing" id="f2S-2m-lai"/>
+                                    <constraint firstItem="meT-Gl-rfV" firstAttribute="firstBaseline" secondItem="qxZ-ER-1jm" secondAttribute="firstBaseline" id="fgp-wP-Co0"/>
                                     <constraint firstItem="PTa-W8-LIw" firstAttribute="leading" secondItem="ZXW-fa-xSh" secondAttribute="leading" constant="30" id="gfY-Ur-Iv0"/>
+                                    <constraint firstItem="meT-Gl-rfV" firstAttribute="leading" secondItem="PTa-W8-LIw" secondAttribute="leading" id="ogS-S6-aM7"/>
                                     <constraint firstItem="PTa-W8-LIw" firstAttribute="bottom" secondItem="ZXW-fa-xSh" secondAttribute="bottom" id="rGp-aM-Xf3"/>
+                                    <constraint firstItem="HkZ-zs-h0Z" firstAttribute="centerX" secondItem="hHL-Tp-p8L" secondAttribute="centerX" id="tWK-qB-max"/>
                                     <constraint firstItem="PTa-W8-LIw" firstAttribute="firstBaseline" secondItem="r59-k2-vnY" secondAttribute="firstBaseline" id="xJJ-it-oeb"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="ZXW-fa-xSh"/>
@@ -467,15 +534,20 @@
                         <outlet property="adressLine2TextField" destination="ltM-ov-RAf" id="S86-dT-Kej"/>
                         <outlet property="bioTextField" destination="E8d-bg-VSM" id="bPd-uA-WAm"/>
                         <outlet property="birthdayTextField" destination="m2s-3l-VhJ" id="h9a-yl-6lC"/>
+                        <outlet property="cityTextField" destination="iHa-ZG-rKM" id="XSe-wv-CXx"/>
                         <outlet property="firsNameTextField" destination="g3x-k1-8yk" id="hP3-vl-cMQ"/>
                         <outlet property="genderPopUpButton" destination="hHL-Tp-p8L" id="7cZ-6e-Wcd"/>
+                        <outlet property="genderUnderlineTextField" destination="HkZ-zs-h0Z" id="PmC-ki-FYD"/>
                         <outlet property="lastNameTextField" destination="CkN-V3-nwH" id="lSt-su-3tc"/>
                         <outlet property="phoneTextField" destination="zns-pq-P67" id="YZu-Ae-L5p"/>
                         <outlet property="profileImage" destination="duV-2S-4ev" id="Atb-vF-7f2"/>
                         <outlet property="saveAccountButton" destination="B0B-oI-T6V" id="uGA-VC-AHU"/>
+                        <outlet property="statesPickerViewButton" destination="qxZ-ER-1jm" id="PON-xi-P5Y"/>
+                        <outlet property="statesUnderlineTextField" destination="meT-Gl-rfV" id="te1-ax-2HN"/>
                         <outlet property="uploadProfileImage" destination="JZu-eL-VJR" id="Dkk-bF-v4a"/>
                         <outlet property="userNameTextField" destination="rVF-eQ-Zd5" id="v5U-gm-0DD"/>
                         <outlet property="websiteTextField" destination="LCg-vZ-exq" id="Ve6-Us-CRv"/>
+                        <outlet property="zipCodeTextField" destination="VDS-Yi-gef" id="2kE-RG-G7O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWU-Uh-xa4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
