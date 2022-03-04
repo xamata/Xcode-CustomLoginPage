@@ -42,7 +42,7 @@ class AccountViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     func setUpElements(){
         Utilities.styleFilledButton(saveAccountButton)
         Utilities.circularImage(profileImage)
-        Utilities.styleFilledButton(uploadProfileImage)
+//        Utilities.styleFilledButton(uploadProfileImage)
         
         // UITextField BorderStyle
         self.firsNameTextField.addBottomBorder()
@@ -83,7 +83,7 @@ class AccountViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     @IBAction func statesPickerView(_ sender: Any) {
         let vc = UIViewController()
         vc.preferredContentSize = CGSize(width: screenWidth, height: screenHeight)
-        let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight))
+        let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 200))
         pickerView.dataSource = self
         pickerView.delegate = self
         
@@ -101,7 +101,6 @@ class AccountViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
         alert.popoverPresentationController?.sourceRect = statesPickerViewButton.bounds
         
         alert.setValue(vc, forKey: "contentViewController")
-        
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { UIAlertAction in
         }))
         alert.addAction(UIAlertAction(title: "Select", style: .default, handler: { UIAlertAction in
@@ -118,6 +117,7 @@ class AccountViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 30))
         label.text = pickerStates[row]
+        label.sizeToFit()
         return label
     }
     
@@ -130,7 +130,7 @@ class AccountViewController: UIViewController,UIPickerViewDelegate,UIPickerViewD
     }
     // height of each of our picker view components
     func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
-        return 60
+        return 50
     }
 
     /*
